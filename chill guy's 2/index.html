@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chill Guy’s | Online Order</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animations.css">
+
+</head>
+
+<body>
+
+<!-- TOP NAV -->
+<div class="lp-topnav">
+
+  <!-- HAMBURGER -->
+  <div class="hamburger" onclick="openDrawer()">
+    ☰
+  </div>
+
+  <!-- LOGO + NAME -->
+  <div class="lp-left">
+    <img src="logo.jpeg" class="lp-logo">
+    <span class="lp-brand">Chill Guy’s</span>
+  </div>
+ 
+  <!-- SEARCH -->
+  <input class="lp-search" id="searchInput" placeholder="Search food...">
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+<section id="home" class="lp-hero">
+  <div class="lp-hero-overlay">
+    <h1>Fresh Food Delivered Fast</h1>
+    <p>Order your favourite snacks & meals online</p>
+    <button onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+      Order Now
+    </button>
+  </div>
+</section>
+
+<!-- ================= NOTICE ================= -->
+<div class="notice-wrapper">
+  <div class="notice-line" id="timingNotice">
+    ⏰ Restaurant open only from <strong>8:00 PM to 11:00 PM</strong>
+  </div>
+  <div class="notice-line" id="deliveryNotice">
+    📍 Delivery available only in <strong>Khodiyar Nagar & Vaishnodevi Circle</strong>
+  </div>
+  <div class="notice-line" id="timingNotice">
+    Above 300 rupees <strong> free delivery</strong>
+  </div>
+  <div class="notice-line" id="timingNotice">
+       Above 500 rupees <strong> get 10% discounnt</strong>
+     </div>
+   <p class="service-note">
+🚚 Delivery available only within <strong>2 km radius</strong> of selected branch.
+</p>
+</div>
+
+<!-- ================= MENU ================= -->
+<section id="menu" class="menu-section">
+
+  <div class="category-bar">
+    <button class="active" onclick="loadCategory('combos',this)">Combos</button>
+    <button onclick="loadCategory('coldCoffeeAndCoco',this)">Cold Coffee And Coco</button>
+    <button onclick="loadCategory('classicShakes',this)">Classic Shakes</button>
+    <button onclick="loadCategory('specialShakes',this)">Special Shakes</button>
+    <button onclick="loadCategory('chocolateLovers',this)">Chocolate Lovers</button>
+    <button onclick="loadCategory('vadapav',this)">Vadapav</button>
+    <button onclick="loadCategory('dabeli',this)">Dabeli</button>
+    <button onclick="loadCategory('puff',this)">Puff</button>
+    <button onclick="loadCategory('frankie',this)">Frankie</button>
+    <button onclick="loadCategory('sandwich',this)">Sandwich</button>
+    <button onclick="loadCategory('grilled',this)">Grilled</button>
+    <button onclick="loadCategory('club',this)">Club</button>
+    <button onclick="loadCategory('burger',this)">Burger</button>
+    <button onclick="loadCategory('garlic',this)">Garlic Bread</button>
+    <button onclick="loadCategory('toast',this)">Chilly Toast</button>
+    <button onclick="loadCategory('maggi',this)">Maggi</button>
+    <button onclick="loadCategory('fries',this)">Fries</button>
+    <button onclick="loadCategory('pizza',this)">Pizza</button>
+  </div>
+
+  <div id="menuList"></div>
+
+  <div class="total-box">
+    Total ₹ <span id="total">0</span>
+  </div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="info-section">
+  <h2>About Us</h2>
+  <p>
+    Chill Guy’s serves fresh, hygienic and tasty food with fast home delivery.
+  </p>
+</section>
+
+<!-- ================= LOCATIONS ================= -->
+<section id="locations" class="info-section gray">
+  <div class="location-card">
+  <h3>📍 Chill Guy’s – Khodiyar Nagar</h3>
+  <p>Delivery available within 2 km radius</p>
+  <p>🕒 8:00 PM – 11:00 PM</p>
+</div>
+
+<div class="location-card">
+  <h3>📍 Chill Guy’s – Vaishnodevi Circle</h3>
+  <p>Delivery available within 2 km radius</p>
+  <p>🕒 8:00 PM – 11:00 PM</p>
+</div>
+<div class="location-card">
+  <h3>📍 Chill Guy’s – Ghodasar</h3>
+  <p class="radius">
+    🚚 Delivery available within <strong>2 km radius</strong>
+  </p>
+
+  <div class="map-box">
+    <!-- ⬇️ અહીં તું જે iframe copy કર્યો છે એ EXACT paste કર -->
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.422250828118!2d72.6144458!3d22.9714953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e890031d120e3%3A0x4d98f98fdf8bb132!2sChill%20guy&#39;s!5e0!3m2!1sen!2sin!4v1770493014496!5m2!1sen!2sin"" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <a class="map-btn" target="_blank"
+     href="https://share.google/d7W8vrIwzrr0Agsxu">
+     📍 Open in Google Maps
+  </a>
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="info-section">
+  <h2>Contact Us</h2>
+  <p>📞 8160942547</p>
+  <p>⏰ 8:00 PM – 11:00 PM</p>
+</section>
+
+<footer>
+  © Chill Guy’s
+</footer>
+
+<!-- ================= LIVE CART ================= -->
+<div class="live-cart" onclick="toggleCheckout()">
+  🛒 Live Cart • ₹ <span id="cartTotal">0</span>
+</div>
+<div id="cartMessage" class="cart-news"></div>
+
+<!-- ================= CHECKOUT ================= -->
+<div id="checkoutPanel" class="checkout hidden">
+  <h2>🧾 Order Summary</h2>
+  <div id="cartItems"></div>
+
+  <div class="price-box">
+    <div class="row"><span>Base</span><span>₹<span id="basePrice">0</span></span></div>
+    <div class="row"><span>Delivery</span><span id="deliveryFee">₹40</span></div>
+    <div class="row discount-row hidden"><span>10% OFF</span><span>-₹<span id="discountAmount">0</span></span></div>
+    <hr>
+    <div class="row final"><span>Payable</span><span>₹<span id="finalAmount">0</span></span></div>
+  </div>
+
+  <div class="checkout-total">
+    Total ₹ <span id="checkoutTotal">0</span>
+  </div>
+
+  <form id="orderForm" onsubmit="sendWhatsApp();return false;">
+    <select name="branch" required>
+      <option value="">Select Branch</option>
+      <option value="Chill Guy’s – Vaishnodevi">Chill Guy’s – Vaishnodevi</option>
+    </select>
+    <input type="text" name="customerName" placeholder="Your Name" required>
+    <input type="tel" name="mobile" placeholder="Mobile Number" required>
+    <textarea name="address" placeholder="Full Address" required></textarea>
+    <button type="submit">Order on WhatsApp</button>
+  </form>
+
+  <button class="close-btn" onclick="toggleCheckout()">Close ✖</button>
+</div>
+
+<!-- ===== MOBILE BOTTOM NAV ===== -->
+<div class="mobile-nav">
+  <a href="#home">🏠<span>Home</span></a>
+  <a href="#menu">📋<span>Menu</span></a>
+  <a href="#about">ℹ️<span>About</span></a>
+  <a href="#locations">📍<span>Locations</span></a>
+  <a href="javascript:void(0)" onclick="toggleCheckout()">🛒<span>Cart</span></a>
+</div>
+
+<!-- SIDE DRAWER -->
+<!-- SIDE DRAWER -->
+<div id="sideDrawer" class="side-drawer">
+  <a href="#home" onclick="closeDrawer()">🏠 Home</a>
+  <a href="#menu" onclick="closeDrawer()">📋 Menu</a>
+  <a href="#about" onclick="closeDrawer()">ℹ️ About</a>
+  <a href="about.html">ℹ️ About Us (Page)</a>
+
+  <a href="#locations" onclick="closeDrawer()">📍 Locations</a>
+  <a href="javascript:void(0)" onclick="toggleCheckout(); closeDrawer()">🛒 Cart</a>
+</div>
+
+<div id="drawerOverlay" class="drawer-overlay" onclick="closeDrawer()"></div>
+
+
+<script src="script.js"></script>
+<script src="ui-enhancements.js"></script>
+
+
+</body>
+</html>
